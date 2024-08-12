@@ -1,82 +1,162 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color:rgb(210, 252, 245);
+    background-color: #e0e7ff;
+    color: #333;
+    line-height: 1.6;
 }
 
 header {
-    background-color:rgb(210, 252, 245);
-    color: #000000;
+    background-color: #3b82f6; 
+    color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    border-bottom: 4px solid #2563eb; 
+}
+
+h3 {
+    margin-left: 20px;
+    color: #1f2937; 
+    font-weight: 500;
+}
+
+button {
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    padding: 12px 24px; 
+    border-radius: 25px; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2); 
+}
+
+button:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px); 
+}
+
+#searchInput {
+    margin: 10px 0;
+    padding: 12px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #93c5fd;
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: border-color 0.3s ease;
+}
+
+#searchInput:focus {
+    border-color: #2563eb; 
+    outline: none;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: #fff;
+    border-radius: 12px; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    margin: 8% auto;
+    padding: 25px;
+    max-width: 550px; 
+    text-align: center;
+}
+
+.close {
+    color: #999;
+    font-size: 24px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #333;
 }
 
 .footer-distributed {
-    background-color:rgb(210, 252, 245);
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-    box-sizing: border-box;
-    width: 100%;
-    text-align: left;
-    font: normal 16px sans-serif;
-    padding: 45px 50px;
-  }
-  
-  
-  .footer-distributed .footer-left p {
-    color: #8f9296;
-    font-size: 0.5rem;
-    margin: 0;
-  }
+    background-color: #3b82f6;
+    text-align: center;
+    font-size: 14px;
+    padding: 40px 0;
+    color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); 
+    border-top: 4px solid #2563eb; 
+}
 
-  ul
-  {
-    background-color: rgb(255, 255, 255);
-  }
-
-.contacts-list {
+ul#contactList {
     list-style-type: none;
     padding: 0;
+    margin: 20px; 
 }
 
-.contacts-list li {
-    margin-bottom: 1rem;
-}
-.contact-list {
-    list-style-type: none;
-    padding: 0;
-}
-.contact-item {
+li.contact-item {
     display: flex;
     align-items: center;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #fdc4c4;
-    border-radius: 5px;
+    background-color: #fff;
+    border-radius: 12px; 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); 
+    margin: 12px 0;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.contact-photo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 15px;
+
+li.contact-item:hover {
+    transform: translateY(-4px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
 }
+
+.contact-name {
+    font-size: 1.4em; 
+    font-weight: 600;
+    margin-bottom: 8px; 
+    color: #1f2937; 
+}
+
+.contact-email, .contact-phone {
+    margin: 6px 0;
+    font-size: 1em;
+    color: #4b5563; 
+}
+
+.contact-avatar {
+    flex-shrink: 0; 
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; 
+    overflow: hidden; 
+    margin-right: 15px; 
+}
+
+.contact-avatar img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .contact-details {
+    flex: 1; 
+}
+
+.contact-actions {
     display: flex;
     flex-direction: column;
-}
-.contact-name {
-    font-size: 1.2em;
-    font-weight: bold;
-}
-.contact-email, .contact-phone {
-    margin: 5px 0;
-}
-img
-{
-    transform: 1s;
-}
-img:hover
-{
-    transform: scale(1.3);
-    z-index: 2;
+    gap: 8px; 
+    margin-left: 15px;
 }
